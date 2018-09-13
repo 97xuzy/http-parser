@@ -11,6 +11,6 @@ else()
     set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}" -O3 -DNDEBUG -pipe)
 endif()
 
-add_library (libhttp_parser http_parser.c)
+add_library (http_parser http_parser.c)
 
-target_include_directories (libhttp_parser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories (http_parser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
