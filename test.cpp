@@ -263,10 +263,7 @@ bool response_test3()
 
     assert(ptr->header(string("Date")).value().compare("Mon, 18 Jul 2016 16:06:00 GMT") == 0);
 
-    assert(ptr->body().value().compare("JKGjhd dfsgfbsdhladksgmhdsjkf\nfsdafnghdjg\nfsdafas") == 0);
-
-    // body should be empty
-    assert(ptr->body().value().empty());
+    assert(ptr->body().value().compare("JKGjhd dfsgfbsdhladksgmhdsjkf\nfsdafnghdjg\nfsdafas\r\n") == 0);
 
     delete ptr;
 
